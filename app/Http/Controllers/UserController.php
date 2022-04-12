@@ -22,10 +22,13 @@ class UserController extends Controller
         // );
         // DB::table('users')
         // ->whereNull('role', 'user')->delete();
-        
+
         $users = DB::table('users')->where('name', 'John')->get();
         foreach ($users as $user) {
             echo $user->name;
         }
+       
     }
+
 }
+
